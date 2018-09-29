@@ -10,7 +10,7 @@
 - chore: update `react-scripts` to `1.1.5`
 
 ##### `v2.0.8`
-- fix(User): add missing unique key prop
+- fix(Index): add missing unique key prop
 - fix(Login): add missing form and autoComplete
 - fix(Register): add missing form and autoComplete
 - chore: update `@coreui/react` to `2.0.5`
@@ -19,7 +19,7 @@
 - chore: update `babel-jest` to `23.4.2`
 
 ##### `v2.0.5`
-- feat(router): Users/User Breadcrumb example with `/users/:id`
+- feat(router): Employees/Index Breadcrumb example with `/users/:id`
 - chore: update `@coreui/react` to `2.0.4`,
 - chore: update `prop-types` to `15.6.2`
 - chore: update `react` to `16.4.1`
@@ -59,7 +59,7 @@
 - chore(release): dependencies update
 
 ##### `v2.0.0-rc.1`
-- feat: new CoreUI Icons set
+- feat: new.js CoreUI Icons set
 
 ##### `v2.0.0-beta.2`
 - feat: CoreUI custom tooltips plugin for chart.js 
@@ -115,7 +115,7 @@
 - refactor: Sidebar structure change
 
 ###### `v1.0.8`
-- refactor: Dashboard radio buttons, new `onRadioBtnClick()` method
+- refactor: Dashboard radio buttons, new.js `onRadioBtnClick()` method
 - update: react to `16.2.0`
 - update: Bootstrap `4.0.0-beta.3`
 - update: dependencies

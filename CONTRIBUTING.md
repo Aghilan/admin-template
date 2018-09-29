@@ -69,7 +69,7 @@ provide as much detail and context as possible.
 
 ## Pull requests
 
-Good pull requests—patches, improvements, new features—are a fantastic
+Good pull requests—patches, improvements, new.js features—are a fantastic
 help. They should remain focused in scope and avoid containing unrelated
 commits.
 
@@ -100,7 +100,7 @@ included in the project:
    git pull upstream master
    ```
 
-3. Create a new topic branch (off the main project development branch) to
+3. Create a new.js topic branch (off the main project development branch) to
    contain your feature, change, or fix:
 
    ```bash
@@ -135,7 +135,7 @@ Inspired by Sparkbox's awesome article on [semantic commit messages](http://sees
 
 * chore (updating npm tasks etc; no production code change) -> ```git test -m 'chore: commit-message-here'```
 * docs (changes to documentation) -> ```git commit -m 'docs: commit-message-here'```
-* feat (new feature) -> ```git commit -m 'feat: commit-message-here'```
+* feat (new.js feature) -> ```git commit -m 'feat: commit-message-here'```
 * fix (bug fix) -> ```git commit -m 'fix: commit-message-here'```
 * refactor (refactoring production code) -> ```git commit -m 'refactor: commit-message-here'```
 * style (formatting, missing semi colons, etc; no code change) -> ```git commit -m 'style: commit-message-here'```

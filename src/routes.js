@@ -177,12 +177,51 @@ const Users = Loadable({
   loading: Loading,
 });
 
+const BroadCast = Loadable({
+  loader: () => import('./views/BroadCast'),
+  loading: Loading,
+});
+
 const User = Loadable({
   loader: () => import('./views/Users/User'),
   loading: Loading,
 });
 
+const NewBroadCast = Loadable({
+  loader: () => import('./views/BroadCast/new'),
+  loading: Loading,
+});
 
+const BroadCastDetails = Loadable({
+  loader: () => import('./views/BroadCast/details'),
+  loading: Loading,
+});
+const OpenBroadCast = Loadable({
+  loader: () => import('./views/BroadCast/open'),
+  loading: Loading,
+});
+
+const ClosedBroadCast = Loadable({
+  loader: () => import('./views/BroadCast/closed'),
+  loading: Loading,
+});
+const ConfigureEmployees = Loadable({
+  loader: () => import('./views/BroadCast/employees'),
+  loading: Loading,
+});
+const Competitors = Loadable({
+  loader: () => import('./views/Competitors'),
+  loading: Loading,
+});
+const Customers = Loadable({
+  loader: () => import('./views/Customers'),
+  loading: Loading,
+});
+
+const Workers = Loadable({
+  loader: () => import('./views/Workers'),
+  loading: Loading,
+});
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
@@ -227,6 +266,16 @@ const routes = [
   { path: '/charts', name: 'Charts', component: Charts },
   { path: '/users', exact: true,  name: 'Users', component: Users },
   { path: '/users/:id', exact: true, name: 'User Details', component: User },
+  { path: '/worker', exact: true, name: 'Worker', component: Workers },
+  { path: '/broadcast', exact: true, name: 'Broadcast', component: OpenBroadCast },
+  { path: '/broadcast/:broadcast', exact: true, name: 'Broadcast Details', component: BroadCastDetails },
+  { path: '/broadcast/new', name: 'New Broadcast', component: NewBroadCast },
+  { path: '/broadcast/open', name: 'Open Broadcast', component: OpenBroadCast },
+  { path: '/broadcast/closed', name: 'Closed Broadcast', component: ClosedBroadCast },
+  { path: '/broadcast/configure-employees',  name: 'Configure Employees', component: ConfigureEmployees },
+  { path: '/customers', exact: true, name: 'Customers', component: Customers },
+  { path: '/competitors', exact: true, name: 'Competitors', component: Competitors }
+
 ];
 
 export default routes;

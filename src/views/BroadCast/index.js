@@ -20,20 +20,20 @@ class Index extends Component {
                 <strong><i className="icon-info pr-1"></i>User id: {this.props.match.params.id}</strong>
               </CardHeader>
               <CardBody>
-                  <Table responsive striped hover>
-                    <tbody>
-                      {
-                        userDetails.map(([key, value]) => {
-                          return (
-                            <tr key={key}>
-                              <td>{`${key}:`}</td>
-                              <td><strong>{value}</strong></td>
-                            </tr>
-                          )
-                        })
-                      }
-                    </tbody>
-                  </Table>
+                <Table responsive striped hover>
+                  <tbody>
+                    {
+                      userDetails.map(([key, value]) => {
+                        return (
+                          <tr key={key}>
+                            <td>{`${key}:`}</td>
+                            <td><strong>{value}</strong></td>
+                          </tr>
+                        )
+                      })
+                    }
+                  </tbody>
+                </Table>
               </CardBody>
             </Card>
           </Col>

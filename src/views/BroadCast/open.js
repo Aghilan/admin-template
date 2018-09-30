@@ -1,33 +1,52 @@
 import React, { Component } from 'react';
-import { Card, CardBody, CardHeader, Col, Row, Table } from 'reactstrap';
+import { Card, CardBody, CardHeader, Col, Row, Pagination, PaginationItem, PaginationLink, Table, Badge } from 'reactstrap';
+import $ from 'jquery';
+import openData from './open-data'
+import 'datatables.net';
 
-import newData from './newData'
+class Open extends Component {
 
-class Index extends Component {
-
+  componentDidMount() {
+    $('#open_broadcasts').DataTable();
+  }
   render() {
 
-    const user = newData.find(user => user.id.toString() === this.props.match.params.id)
-
-    const userDetails = user ? Object.entries(user) : [['id', (<span><i className="text-muted icon-ban"></i> Not found</span>)]]
+    const openBroadCastItems = openData
 
     return (
       <div className="animated fadeIn">
         <Row>
-          <Col lg={6}>
+          <Col xs="12" lg="12">
             <Card>
               <CardHeader>
-                <strong><i className="icon-info pr-1"></i>User id: {this.props.match.params.id}</strong>
+                <i className="fa fa-align-justify"></i> Open Broadcast
               </CardHeader>
               <CardBody>
-                <Table responsive striped hover>
+                <Table id="open_broadcasts" responsive striped>
+                  <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Name</th>
+                    <th>Messages</th>
+                    <th>Access Rate</th>
+                    <th>Response Rate</th>
+                    <th>Close</th>
+                  </tr>
+                  </thead>
                   <tbody>
                   {
-                    userDetails.map(([key, value]) => {
+                    openBroadCastItems.map( (open) => {
+                      let {date, name, messages, accessRate, responseRate, id} = open
                       return (
-                        <tr key={key}>
-                          <td>{`${key}:`}</td>
-                          <td><strong>{value}</strong></td>
+                        <tr key={id}>
+                          <td>{date.toLocaleDateString("en-US")}</td>
+                          <td>{name}</td>
+                          <td>{messages}</td>
+                          <td>{accessRate}</td>
+                          <td>{responseRate}</td>
+                          <td>
+                            <Badge onClick={() => console.log(id)} color="success">Close Now</Badge>
+                          </td>
                         </tr>
                       )
                     })
@@ -43,4 +62,4 @@ class Index extends Component {
   }
 }
 
-export default Index;
+export default Open;

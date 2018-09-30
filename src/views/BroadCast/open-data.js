@@ -1,0 +1,31 @@
+const newData = [
+  {id: 0, name: 'Aghilan', date: new Date(2018, 2, 1),  messages: 21, accessRate: 65, responseRate: 76},
+  {id: 1, name: 'Zbyněk Phoibos', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76},
+  {id: 2, name: 'Zbyněk Phoibos', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76},
+  {id: 3, name: 'Zbyněk Phoibos', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76},
+  {id: 4, name: 'Zbyněk Phoibos', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76},
+  {id: 5, name: 'Zbyněk Phoibos', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76},
+  {id: 6, name: 'Zbyněk Phoibos', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76},
+  {id: 7, name: 'Zbyněk Phoibos', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76},
+  {id: 8, name: 'Zbyněk Phoibos', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76},
+  {id: 9, name: 'Zbyněk Phoibos', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76},
+  {id: 10, name: 'Zbyněk Phoibos', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76},
+  {id: 11, name: 'Zbyněk Phoibos', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76},
+  {id: 12, name: 'Zbyněk Phoibos', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76},
+  {id: 13, name: 'Zbyněk Phoibos', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76},
+  {id: 14, name: 'Zbyněk Phoibos', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76},
+  {id: 15, name: 'Zbyněk Phoibos', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76},
+  {id: 16, name: 'Zbyněk Phoibos', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76},
+  {id: 17, name: 'Zbyněk Phoibos', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76},
+  {id: 18, name: 'Zbyněk Phoibos', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76},
+  {id: 19, name: 'Zbyněk Phoibos', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76},
+  {id: 20, name: 'Zbyněk Phoibos', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76},
+  {id: 21, name: 'Zbyněk Phoibos', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76},
+  {id: 22, name: 'Zbyněk Phoibos', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76},
+  {id: 23, name: 'Einar Randall', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76},
+  {id: 24, name: 'Félix Troels', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76},
+  {id: 25, name: 'Aulus Agmundr', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76},
+  {id: 42, name: 'Ford Prefex', date: new Date(2018, 2, 1), messages: 21, accessRate: 65, responseRate: 76}
+]
+
+export default newData

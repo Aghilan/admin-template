@@ -1,33 +1,64 @@
 import React, { Component } from 'react';
-import { Card, CardBody, CardHeader, Col, Row, Table } from 'reactstrap';
+import { Card, CardBody, Col, Row, Table, Input, Button } from 'reactstrap';
 
-import newData from './newData'
+import $ from "jquery";
+import 'datatables.net';
+import broadCastDetails from "./broadcast-details-data";
 
-class Index extends Component {
+class Details extends Component {
 
+  componentDidMount() {
+    $('#broadcast_details').DataTable();
+  }
   render() {
-
-    const user = newData.find(user => user.id.toString() === this.props.match.params.id)
-
-    const userDetails = user ? Object.entries(user) : [['id', (<span><i className="text-muted icon-ban"></i> Not found</span>)]]
 
     return (
       <div className="animated fadeIn">
         <Row>
-          <Col lg={6}>
+
+          <Col xs="12" lg="12">
             <Card>
-              <CardHeader>
-                <strong><i className="icon-info pr-1"></i>User id: {this.props.match.params.id}</strong>
-              </CardHeader>
               <CardBody>
-                <Table responsive striped hover>
+                <Row>
+                  <Col xs="6" md="6">
+                    <Input readonly value="Need help for Bruce" type="textarea" name="textarea-input" id="textarea-input" rows="1"
+                           placeholder="Cool Name" />
+                  </Col>
+                  <Col xs="2" md="2">
+                    <Button> Close </Button>
+                  </Col>
+                </Row>
+                <br />
+                <br />
+                <Row>
+                  <Col xs="8" md="8">
+                    <Input readonly value="Hello! Bruce (in Parker) needs ongoing help M-Su 9a - 5p. Care invloves homemaking and companion" type="textarea" name="textarea-input" id="textarea-input" rows="3"
+                         placeholder="Content..." />
+                  </Col>
+                </Row>
+                <br />
+                <br />
+                <Table id="broadcast_details" responsive striped>
+                  <thead>
+                  <tr>
+                    <th>Employee Name</th>
+                    <th>Accessed</th>
+                    <th>Responded</th>
+                    <th>Response</th>
+                    <th>Comments</th>
+                  </tr>
+                  </thead>
                   <tbody>
                   {
-                    userDetails.map(([key, value]) => {
+                    broadCastDetails.employees.map( (employees, index) => {
+                      let {name, accessed, response, responded, comments} = employees
                       return (
-                        <tr key={key}>
-                          <td>{`${key}:`}</td>
-                          <td><strong>{value}</strong></td>
+                        <tr key={index}>
+                          <td>{name}</td>
+                          <td>{accessed}</td>
+                          <td>{responded}</td>
+                          <td>{response}</td>
+                          <td>{comments}</td>
                         </tr>
                       )
                     })
@@ -43,4 +74,4 @@ class Index extends Component {
   }
 }
 
-export default Index;
+export default Details;

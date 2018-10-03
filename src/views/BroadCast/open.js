@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
 import { Card, CardBody, CardHeader, Col, Row, Pagination, PaginationItem, PaginationLink, Table, Badge } from 'reactstrap';
+import {Redirect} from 'react-router-dom';
 import $ from 'jquery';
 import openData from './open-data'
 import 'datatables.net';
 
 class Open extends Component {
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      detailClicked: -1
+    }
+  }
   componentDidMount() {
     $('#open_broadcasts').DataTable();
   }
   render() {
 
-    const openBroadCastItems = openData
+    const openBroadCastItems = openData,
+      {detailClicked} = this.state;
 
     return (
       <div className="animated fadeIn">
@@ -38,7 +45,15 @@ class Open extends Component {
                     openBroadCastItems.map( (open) => {
                       let {date, name, messages, accessRate, responseRate, id} = open
                       return (
-                        <tr key={id}>
+                        <tr key={id}
+                            onClick={() => {
+                              console.log(id);
+                              this.setState({
+                                detailClicked: id
+                              })
+                            }}
+                        >
+                          {(detailClicked > -1)?<Redirect push to={"/broadcasts/" + detailClicked}/> : null}
                           <td>{date.toLocaleDateString("en-US")}</td>
                           <td>{name}</td>
                           <td>{messages}</td>

@@ -272,7 +272,7 @@ const routes = [
   { path: '/broadcast/open', name: 'Open Broadcast', component: OpenBroadCast },
   { path: '/broadcast/closed', name: 'Closed Broadcast', component: ClosedBroadCast },
   { path: '/broadcast/configure-employees',  name: 'Configure Employees', component: ConfigureEmployees },
-  { path: '/broadcast/:broadcast', exact: true, name: 'Broadcast Details', component: BroadCastDetails },
+  { path: '/broadcasts/:broadcast', exact: true, name: 'Broadcast Details', component: BroadCastDetails },
   { path: '/customers', exact: true, name: 'Customers', component: Customers },
   { path: '/competitors', exact: true, name: 'Competitors', component: Competitors }
 

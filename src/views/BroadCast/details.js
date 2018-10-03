@@ -15,13 +15,12 @@ class Details extends Component {
     return (
       <div className="animated fadeIn">
         <Row>
-
           <Col xs="12" lg="12">
             <Card>
               <CardBody>
                 <Row>
                   <Col xs="6" md="6">
-                    <Input readonly value="Need help for Bruce" type="textarea" name="textarea-input" id="textarea-input" rows="1"
+                    <Input readOnly value="Need help for Bruce" type="textarea" name="textarea-input" id="textarea-input" rows="1"
                            placeholder="Cool Name" />
                   </Col>
                   <Col xs="2" md="2">
@@ -32,7 +31,7 @@ class Details extends Component {
                 <br />
                 <Row>
                   <Col xs="8" md="8">
-                    <Input readonly value="Hello! Bruce (in Parker) needs ongoing help M-Su 9a - 5p. Care invloves homemaking and companion" type="textarea" name="textarea-input" id="textarea-input" rows="3"
+                    <Input readOnly value="Hello! Bruce (in Parker) needs ongoing help M-Su 9a - 5p. Care invloves homemaking and companion" type="textarea" name="textarea-input" id="textarea-input" rows="3"
                          placeholder="Content..." />
                   </Col>
                 </Row>

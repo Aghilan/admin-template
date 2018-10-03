@@ -9829,5 +9829,27 @@ body {
 .app-header .navbar-nav .dropdown-menu-right {
   right: auto; }
 
+.subject-info-box-1,
+.subject-info-box-2 {
+  float: left;
+  width: 30%; }
+  .subject-info-box-1 select,
+  .subject-info-box-2 select {
+    height: 400px;
+    padding: 0; }
+    .subject-info-box-1 select option,
+    .subject-info-box-2 select option {
+      padding: 4px 10px 4px 10px; }
+    .subject-info-box-1 select option:hover,
+    .subject-info-box-2 select option:hover {
+      background: #EEEEEE; }
+
+.subject-info-arrows {
+  float: left;
+  width: 25%; }
+  .subject-info-arrows input {
+    width: 70%;
+    margin-bottom: 5px; }
+
 html body .app.flex-row.align-items-center {
   height: 100vh; }

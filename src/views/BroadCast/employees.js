@@ -1,62 +1,54 @@
 import React, { Component } from 'react';
-import { Badge, Card, CardBody, CardHeader, Col, Row, Table } from 'reactstrap';
+import { Card, CardBody, CardHeader, Input, Button, Col, Row, Table } from 'reactstrap';
 
-import newData from './newData'
-
-function UserRow(props) {
-  const user = props.user
-  const userLink = `#/users/${user.id}`
-
-  const getBadge = (status) => {
-    return status === 'Active' ? 'success' :
-      status === 'Inactive' ? 'secondary' :
-        status === 'Pending' ? 'warning' :
-          status === 'Banned' ? 'danger' :
-            'primary'
-  }
-
-  return (
-    <tr key={user.id.toString()}>
-        <th scope="row"><a href={userLink}>{user.id}</a></th>
-        <td><a href={userLink}>{user.name}</a></td>
-        <td>{user.registered}</td>
-        <td>{user.role}</td>
-        <td><Badge href={userLink} color={getBadge(user.status)}>{user.status}</Badge></td>
-    </tr>
-  )
-}
+import employeeDetails from "./employees-data";
+import $ from "jquery";
+import 'datatables.net';
 
 class Employees extends Component {
 
+  componentDidMount() {
+    $('#employee_details').DataTable();
+  }
   render() {
-
-    const userList = newData.filter((user) => user.id < 10)
 
     return (
       <div className="animated fadeIn">
         <Row>
-          <Col xl={6}>
+          <Col xs="12" lg="12">
             <Card>
-              <CardHeader>
-                <i className="fa fa-align-justify"></i> Users <small className="text-muted">example</small>
-              </CardHeader>
               <CardBody>
-                <Table responsive hover>
+                <Col col="6" sm="4" md="2" xl className="mb-3 mb-xl-0 offset-md-9">
+                  <Button block color="primary">Add</Button>
+                </Col>
+                <Table id="employee_details" responsive striped>
                   <thead>
-                    <tr>
-                      <th scope="col">id</th>
-                      <th scope="col">name</th>
-                      <th scope="col">registered</th>
-                      <th scope="col">role</th>
-                      <th scope="col">status</th>
-                    </tr>
+                  <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>SMS Address</th>
+                    <th>Broadcast Enabled?</th>
+                  </tr>
                   </thead>
                   <tbody>
-                    {userList.map((user, index) =>
-                      <UserRow key={index} user={user}/>
-                    )}
+                  {
+                    employeeDetails.map( (employees, index) => {
+                      let {name, lastName, smsAddress, broadCastEnabled} = employees
+                      return (
+                        <tr key={index}>
+                          <td>{name}</td>
+                          <td>{lastName}</td>
+                          <td>{smsAddress}</td>
+                          <td><Input type={"checkbox"} defaultChecked={broadCastEnabled}/></td>
+                        </tr>
+                      )
+                    })
+                  }
                   </tbody>
                 </Table>
+                <Col col="6" sm="4" md="2" xl className="mb-3 mb-xl-0 offset-md-9">
+                  <Button block color="primary">Save</Button>
+                </Col>
               </CardBody>
             </Card>
           </Col>

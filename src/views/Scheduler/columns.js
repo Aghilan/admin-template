@@ -1,0 +1,26 @@
+const columns = [
+  {title:"Week", field:"week", sorter:"string", width:100, editor:true, align:"center"},
+  {title:"Date", field:"date",  sorter:"string", width:100, editor:true, align:"center"},
+  {title:"Shift Name", field:"shift_name", sorter:"string", width:100, editor:true, align:"center"},
+  {title:"Time", field:"time",  sorter:"string", width:100, editor:true, align:"center"},
+  {title:"Client", field:"client",  sorter:"string", width:100, editor:true, align:"center"},
+  {title:"Status", field:"status", sorter:"string", width:100, editor:true, align:"center"},
+  {title:"Employee", field:"employee", sorter:"string", width:100, editor:true, align:"center"},
+  {title:"Includes Overnight?", field:"is_includes_overnight",sorter:"string", width:100, editor:true, align:"center"},
+  {title:"Is Holiday?", field:"is_holiday", sorter:"string", width:100, editor:true, align:"center"},
+  {title:"Payroll Adjustment", field:"payroll_adjustment", sorter:"string", width:100, editor:true, align:"center"},
+  {title:"Invoice Adjustment", field:"invoice_adjustment", sorter:"string", width:100, editor:true, align:"center"},
+  {title:"Scheduled Duration (hrs)", field:"scheduled_duration",sorter:"string", width:100, editor:true, align:"center"},
+  {title:"Actual Time", field:"actual_time",sorter:"string", width:100, editor:true, align:"center"},
+  {title:"Mileage", field:"mileage",sorter:"string", width:100, editor:true, align:"center"},
+  {title:"Other Reimbursement Requested", field: 'other_reimbursement_requested', sorter:"string", width:100, editor:true, align:"center"},
+  {title:"Family/Shared Care Notes", field:"family_shared_care_notes", sorter:"string", width:100, editor:true, align:"center"},
+  {title:"Actual Duration", field:"actual_duration",sorter:"string", width:100, editor:true, align:"center"},
+  {title:"Invoice Rate", field:"invoice_rate",sorter:"string", width:100, editor:true, align:"center"},
+  {title:"Payroll Rate", field:"payroll_rate",sorter:"string", width:100, editor:true, align:"center"},
+  {title:"Total Invoice", field:"total_invoice", sorter:"string", width:100, editor:true, align:"center"},
+  {title:"Total Pay", field:"total_pay", sorter:"string", width:100, editor:true, align:"center"},
+  {title:"Margin", field:"margin", sorter:"string", width:100, editor:true, align:"center"},
+  {title:"Margin %", field:"margin_percentage", sorter:"string", width:100, editor:true, align:"center"}
+];
+export default columns;

@@ -59,6 +59,11 @@ export default {
       icon: 'fa fa-user-secret'
     },
     {
+      name: 'Time/Attendance',
+      url: '/scheduler',
+      icon: 'fa fa-user-secret'
+    },
+    {
       divider: true,
     }
   ],

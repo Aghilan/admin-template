@@ -36,7 +36,8 @@
     "react-router-dom": "^4.3.1",
     "react-test-renderer": "^16.4.2",
     "reactstrap": "^6.4.0",
-    "simple-line-icons": "^2.4.1"
+    "simple-line-icons": "^2.4.1",
+    "tabulator-tables": "^4.0.4"
   },
   "devDependencies": {
     "babel-jest": "^23.4.2",

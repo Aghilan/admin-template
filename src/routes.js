@@ -223,6 +223,12 @@ const Workers = Loadable({
   loading: Loading,
 });
 
+const Scheduler = Loadable({
+  loader: () => import('./views/Scheduler'),
+  loading: Loading,
+});
+
+
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
   { path: '/', exact: true, name: 'Home', component: DefaultLayout },
@@ -274,7 +280,8 @@ const routes = [
   { path: '/broadcast/configure-employees',  name: 'Configure Employees', component: ConfigureEmployees },
   { path: '/broadcasts/:broadcast', exact: true, name: 'Broadcast Details', component: BroadCastDetails },
   { path: '/customers', exact: true, name: 'Customers', component: Customers },
-  { path: '/competitors', exact: true, name: 'Competitors', component: Competitors }
+  { path: '/competitors', exact: true, name: 'Competitors', component: Competitors },
+  { path: '/scheduler', exact: true, name: 'Time/Attendance', component: Scheduler }
 
 ];
 

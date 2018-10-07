@@ -108,7 +108,7 @@ class New extends Component {
                 </Row>
                 <br />
                 <br />
-                <Col col="6" sm="4" md="3" xl className="mb-4 mb-xl-0 offset-md-6">
+                <Col col="6" sm="4" md="3" xl="2" className="offset-md-6">
                   <Button block color="primary">Send Broadcast</Button>
                 </Col>
               </CardBody>

@@ -20,7 +20,7 @@ class Details extends Component {
               <CardBody>
                 <Row>
                   <Col xs="6" md="6">
-                    <Input readOnly value="Need help for Bruce" type="textarea" name="textarea-input" id="textarea-input" rows="1"
+                    <Input defaultValue="Need help for Bruce" type="textarea" name="textarea-input" id="textarea-input" rows="1"
                            placeholder="Cool Name" />
                   </Col>
                   <Col xs="2" md="2">
@@ -31,7 +31,7 @@ class Details extends Component {
                 <br />
                 <Row>
                   <Col xs="8" md="8">
-                    <Input readOnly value="Hello! Bruce (in Parker) needs ongoing help M-Su 9a - 5p. Care invloves homemaking and companion" type="textarea" name="textarea-input" id="textarea-input" rows="3"
+                    <Input defaultValue="Hello! Bruce (in Parker) needs ongoing help M-Su 9a - 5p. Care invloves homemaking and companion" type="textarea" name="textarea-input" id="textarea-input" rows="3"
                          placeholder="Content..." />
                   </Col>
                 </Row>

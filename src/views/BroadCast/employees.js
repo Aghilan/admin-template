@@ -18,7 +18,7 @@ class Employees extends Component {
           <Col xs="12" lg="12">
             <Card>
               <CardBody>
-                <Col col="6" sm="4" md="2" xl className="mb-3 mb-xl-0 offset-md-9">
+                <Col col="6" sm="4" md="2" xl="2" className="offset-md-9">
                   <Button block color="primary">Add</Button>
                 </Col>
                 <Table id="employee_details" responsive striped>
@@ -46,7 +46,7 @@ class Employees extends Component {
                   }
                   </tbody>
                 </Table>
-                <Col col="6" sm="4" md="2" xl className="mb-3 mb-xl-0 offset-md-9">
+                <Col col="2" sm="2" md="2" xl="2" className="offset-sm-9">
                   <Button block color="primary">Save</Button>
                 </Col>
               </CardBody>

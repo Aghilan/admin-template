@@ -28,16 +28,16 @@ export default {
       children: [
         {
           name: 'Create New',
-          url: '/broadcast/new.js',
+          url: '/broadcast/new',
           icon: 'fa fa-plus-square',
         },
         {
-          name: 'Open',
+          name: 'Open Casts',
           url: '/broadcast/open',
           icon: 'fa fa-envelope-open',
         },
         {
-          name: 'Closed',
+          name: 'Closed Casts',
           url: '/broadcast/closed',
           icon: 'fa fa-window-close',
         },

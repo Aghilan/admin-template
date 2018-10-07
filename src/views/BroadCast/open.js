@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardBody, CardHeader, Col, Row, Pagination, PaginationItem, PaginationLink, Table, Badge } from 'reactstrap';
+import { Card, CardBody, CardHeader, Col, Row, Pagination, PaginationItem, PaginationLink, Table, Button } from 'reactstrap';
 import {Redirect} from 'react-router-dom';
 import $ from 'jquery';
 import openData from './open-data'
@@ -60,7 +60,7 @@ class Open extends Component {
                           <td>{accessRate}</td>
                           <td>{responseRate}</td>
                           <td>
-                            <Badge onClick={() => console.log(id)} color="success">Close Now</Badge>
+                            <Button onClick={() => console.log(id)} color="success">Close Now</Button>
                           </td>
                         </tr>
                       )

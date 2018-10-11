@@ -272,7 +272,9 @@ const routes = [
   { path: '/charts', name: 'Charts', component: Charts },
   { path: '/users', exact: true,  name: 'Users', component: Users },
   { path: '/users/:id', exact: true, name: 'User Details', component: User },
-  { path: '/worker', exact: true, name: 'Worker', component: Workers },
+  { path: '/workers', exact: true, name: 'Worker', component: Workers },
+  { path: '/workers/candidates', exact: true, name: 'Candidates', component: Workers },
+  { path: '/workers/employees', exact: true, name: 'Employees', component: Workers },
   { path: '/broadcast', exact: true, name: 'Broadcast', component: OpenBroadCast },
   { path: '/broadcast/new', name: 'New Broadcast', component: NewBroadCast },
   { path: '/broadcast/open', name: 'Open Broadcast', component: OpenBroadCast },
@@ -281,7 +283,9 @@ const routes = [
   { path: '/broadcasts/:broadcast', exact: true, name: 'Broadcast Details', component: BroadCastDetails },
   { path: '/customers', exact: true, name: 'Customers', component: Customers },
   { path: '/competitors', exact: true, name: 'Competitors', component: Competitors },
-  { path: '/scheduler', exact: true, name: 'Time/Attendance', component: Scheduler }
+  { path: '/time/schedule', exact: true, name: 'Schedule', component: Scheduler },
+  { path: '/time/entries', exact: true, name: 'Time Entries', component: Scheduler },
+  { path: '/time/whos-working', exact: true, name: 'Who\'s Working', component: Scheduler },
 
 ];
 

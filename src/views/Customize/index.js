@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-import { Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
+import { Card, CardBody, CardHeader, Col, Row, Table } from 'reactstrap';
 
-import Form from '../Common/form';
-import layout from '../../assets/layout-config.json';
+import {FormBuilder} from 'react-formio';
 
 class Index extends Component {
-  constructor (props) {
-    super(props);
-   }
 
   render() {
     return (
@@ -16,10 +12,12 @@ class Index extends Component {
           <Col lg={12}>
             <Card>
               <CardHeader>
-                <strong><i className="icon-info pr-1"></i>Worker</strong>
+                <strong><i className="icon-info pr-1"></i>Customize</strong>
               </CardHeader>
               <CardBody>
-                <Form layout={layout}/>
+                <Col>
+                  <FormBuilder form={{display: 'form'}} onChange={(schema) => console.log(schema)} />
+                </Col>
               </CardBody>
             </Card>
           </Col>

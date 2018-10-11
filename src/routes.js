@@ -224,10 +224,14 @@ const Workers = Loadable({
 });
 
 const Scheduler = Loadable({
-  loader: () => import('./views/Scheduler'),
+  loader: () => import('./views/Scheduler/index'),
   loading: Loading,
 });
 
+const Customize = Loadable({
+  loader: () => import('./views/Customize/index'),
+  loading: Loading,
+});
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
@@ -286,7 +290,8 @@ const routes = [
   { path: '/time/schedule', exact: true, name: 'Schedule', component: Scheduler },
   { path: '/time/entries', exact: true, name: 'Time Entries', component: Scheduler },
   { path: '/time/whos-working', exact: true, name: 'Who\'s Working', component: Scheduler },
-
+  { path: '/accounts/:id',  name: 'Accounts', component: Workers },
+  { path: '/customize',  name: 'Customize', component: Customize },
 ];
 
 export default routes;

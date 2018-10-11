@@ -178,6 +178,11 @@ export default {
         },
       ]
     },
+    {
+      name: "Customize",
+      url: "/customize",
+      icon: "fa fa-user",
+    },
 
     {
       divider: true,
